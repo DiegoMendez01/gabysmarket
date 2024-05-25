@@ -327,5 +327,3 @@ CREATE TABLE IF NOT EXISTS purchase_details
     INDEX `idx_purchase_id` (`purchase_id`) USING BTREE,
     INDEX `idx_product_id` (`product_id`) USING BTREE
 );
-
-/*================ CREATE PROCEDURES ================*/
