@@ -23,7 +23,6 @@ CREATE TABLE IF NOT EXISTS enterprises
     `email` VARCHAR(150) DEFAULT NULL,
     `phone` VARCHAR(50) DEFAULT NULL,
     `address` VARCHAR(150) DEFAULT NULL,
-    `pago` VARCHAR(150) DEFAULT NULL,
     `company_id` INT(11) DEFAULT NULL,
     `created_at` DATETIME,
     `modified_at` TIMESTAMP,
@@ -235,7 +234,7 @@ CREATE TABLE IF NOT EXISTS sales
 CREATE TABLE IF NOT EXISTS sale_details
 (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
-    `sale_price` DECIMAL(20, 2) DEFAULT NULL,
+    `price` DECIMAL(20, 2) DEFAULT NULL,
     `quantity` INT(11) DEFAULT NULL,
     `total` DECIMAL(20, 2) DEFAULT NULL,
     `sale_id` INT(11) DEFAULT NULL,
@@ -295,6 +294,7 @@ CREATE TABLE IF NOT EXISTS purchases
     `payment_id` INT(11) DEFAULT NULL,
     `currency_id` INT(11) DEFAULT NULL,
     `document_id` INT(11) DEFAULT NULL,
+    `status_purchase` INT(11) DEFAULT NULL,
     `created_at` DATETIME,
     `modified_at` TIMESTAMP,
     `is_active` TINYINT(2) DEFAULT 1,
@@ -314,7 +314,7 @@ CREATE TABLE IF NOT EXISTS purchases
 CREATE TABLE IF NOT EXISTS purchase_details
 (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
-    `purchase_price` DECIMAL(20, 2) DEFAULT NULL,
+    `price` DECIMAL(20, 2) DEFAULT NULL,
     `quantity` INT(11) DEFAULT NULL,
     `total` DECIMAL(20, 2) DEFAULT NULL,
     `purchase_id` INT(11) DEFAULT NULL,
