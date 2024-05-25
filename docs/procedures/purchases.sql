@@ -34,7 +34,7 @@ DELIMITER ;
 -- Listar detalles de compra por ID de compra
 DELIMITER //
 
-CREATE PROCEDURE SP_L_PURCHASE_01(IN purchaseId INT(11))
+CREATE PROCEDURE SP_V_PURCHASE_01(IN purchaseId INT(11))
 BEGIN
     SELECT
         pd.id,
@@ -100,7 +100,7 @@ DELIMITER ;
 -- Listar compras por ID de sucursal
 DELIMITER //
 
-CREATE PROCEDURE SP_L_PURCHASE_02(IN purchaseId INT(11))
+CREATE PROCEDURE SP_V_PURCHASE_02(IN purchaseId INT(11))
 BEGIN
     SELECT
         p.id, 
@@ -211,7 +211,7 @@ DELIMITER ;
 -- Listar todas las compras por Sucursal
 DELIMITER //
 
-CREATE PROCEDURE SP_L_PURCHASE_03(IN branchId INT)
+CREATE PROCEDURE SP_V_PURCHASE_03(IN branchId INT)
 BEGIN
     SELECT
         p.id,   
